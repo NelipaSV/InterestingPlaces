@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:behavior_peekHeight="100dp"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+            tools:ignore="MissingPrefix">
+
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="#8BC34A"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="3dp"
+                app:contentPadding="10dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:background="@android:color/transparent">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                <TextView
+                        tools:text="П'яна вишня"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_name_place"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                />
+                <TextView
+                        tools:text="вулиця Грінченка, 1/2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_adress_place"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name_place"
+                        app:layout_constraintStart_toStartOf="@+id/tv_name_place"
+                        android:layout_marginTop="8dp"/>
+                <TextView
+                        tools:text="Cocktail Bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_description_place"
+                        app:layout_constraintStart_toStartOf="@+id/tv_name_place"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_adress_place"
+                        android:layout_marginTop="8dp"/>
+                <TextView
+                        android:text="@string/item_card_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        app:layout_constraintStart_toEndOf="@+id/tv_description_place"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_description_place"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_description_place"/>
+                <TextView
+                        tools:text="149"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_distance_to" app:layout_constraintStart_toEndOf="@+id/textView4"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/textView4"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView4"/>
+                <Button
+                        android:text="@string/btn_make_route"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_description_place"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

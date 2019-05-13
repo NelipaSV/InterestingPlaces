@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Цікаві місця</string>
+    <string name="map_activity_your_placement">Ваше місцезнаходження</string>
+    <string name="toast_no_location">Немає останнього відомого місцезнаходження</string>
+    <string name="title_activity_maps">Цікаві місця</string>
+    <string name="item_card_distance">відстань</string>
+    <string name="btn_make_route">Створити маршрут</string>
+</resources>
